@@ -6,11 +6,11 @@
 <body>
     <h2>Welcome, {{ user.name }}!</h2>
     <p>Welcome to your dashboard.</p>
-    <ul>
+    {% comment %} <ul>
         <li><a href="{% url 'gallery_home' %}">View Gallery</a></li>
         <li><a href="{% url 'upload_photo' %}">Upload Photo</a></li>
         <li><a href="{% url 'create_category' %}">Create Category</a></li>
-    </ul>
+    </ul> {% endcomment %}
     <a href="{% url 'accounts:logout' %}">Logout</a>
 </body>
 </html>
