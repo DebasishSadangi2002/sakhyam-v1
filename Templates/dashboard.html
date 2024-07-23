@@ -1,7 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
 </head>
 <body>
     <h1>Admin Dashboard</h1>
@@ -32,7 +34,7 @@
             <li>No approved users without password set.</li>
         {% endfor %}
     </ul>
-
+    <button onclick="window.location.href='{% url 'accounts:logout' %}'">Logout</button>
     {% comment %} <h2>Gallery Operations</h2>
     <ul>
         <li><a href="{% url 'accounts:gallery_home' %}">View Gallery</a></li>
