@@ -9,7 +9,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('accounts/', include('accounts.urls')),
     path('events/', include('events.urls')),
-    #path('members/', include('members.urls')),
+    path('members/', include('Member.urls')),
         # Your accounts app URLs
     
         # Include gallery app URLs

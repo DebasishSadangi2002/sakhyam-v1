@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'events',
-   'Member',
+    'Member',
     
 ]
 AUTH_USER_MODEL = 'accounts.CustomUser'
@@ -135,11 +135,7 @@ STORAGES = {
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
-    'default': {
-        'BACKEND': 'django.core.files.storage.FileSystemStorage',
-        'OPTIONS': {
-            # Any custom options for the default storage backend
-        }}
+    
     
 }
 
