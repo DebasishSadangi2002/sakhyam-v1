@@ -1,0 +1,31 @@
+<!-- member_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Members List</h1>
+    </header>
+
+    <ul>
+        {% for member in members %}
+        <li>
+            <img src="{{ member.photo.url }}" alt="{{ member.name }}">
+            <h2>{{ member.name }}</h2>
+            <p>Email: {{ member.email }}</p>
+            <p>Phone: {{ member.phone }}</p>
+            <p>Bio: {{ member.bio }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <footer>
+        <p>&copy; 2024 Nukkad Drama Club. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
     'accounts',
+    'events',
+   'Member',
     
 ]
 AUTH_USER_MODEL = 'accounts.CustomUser'
@@ -129,9 +131,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 STORAGES = {
     # ...
+    
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
+    'default': {
+        'BACKEND': 'django.core.files.storage.FileSystemStorage',
+        'OPTIONS': {
+            # Any custom options for the default storage backend
+        }}
+    
 }
 
 # Default primary key field type
@@ -149,3 +158,5 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+# # settings.py
+# DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'

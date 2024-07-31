@@ -7,7 +7,10 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('accounts/', include('accounts.urls')),  # Your accounts app URLs
+    path('accounts/', include('accounts.urls')),
+    path('events/', include('events.urls')),
+    #path('members/', include('members.urls')),
+        # Your accounts app URLs
     
         # Include gallery app URLs
     #path('', include('core.urls')),               # Your core app URLs (home, etc.)
