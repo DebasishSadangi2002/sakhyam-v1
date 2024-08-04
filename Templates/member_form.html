@@ -36,7 +36,8 @@
                     <h2>
                         WANNA JOIN US!!
                     </h2>
-                    <form action="#">
+                    <form method="post" action="{% url 'member:member_create' %}">
+                        {% csrf_token %}
                         <div id ="input-row">
                             <div id ="input-group">
                                 <label><b>Name</b></label>
