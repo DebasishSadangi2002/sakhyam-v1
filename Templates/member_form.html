@@ -1,25 +1,66 @@
-<!-- member_form.html -->
+ {% load static %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>JOIN US page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href={% static 'css/pratyush.css' %}>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Member</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Add Member</h1>
-    </header>
-
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
-    </form>
-
-    <footer>
-        <p>&copy; 2024 Nukkad Drama Club. All rights reserved.</p>
-    </footer>
+    <div class="topic">
+        <h1>
+            <u>
+                CONNECT WITH US
+            </u>
+        </h1>
+    </div>
+    
+    <div id="container">
+        <br>
+        Welcome to Sakhyam! We're thrilled that you've chosen to reach out and connect with us. <br>
+        Whether you're here seeking information or have questions, we're here to help.
+        Your connection with us is important; we look forward to building a meaningful & productive relationship with you. <br>
+        Thank you for reaching out, and we're excited to embark on this journey with you.
+    </div>
+    
+    <div id="box1">
+        <h2>WANNA JOIN US!!</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div id="input-row">
+                <div id="input-group">
+                    
+                    {{ form.as_p }}
+                </div>
+                
+                
+            </div>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    
+    <div class="footer">
+        <div class="socialicons">
+            <a href="mailto:sakhyamgcek@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.instagram.com/sakhyam_nukkad_team_of_gcek?utm_source=qr&igsh=YjZ1cW9tZjlmajhq"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com/@sakhyamgcek?si=tLiu7M25kNSUuCYX"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="logo">
+            <img src="GCEK.jpg" alt="GCEK Logo">
+        </div>
+        <div class="contacts">
+            <p>
+                Jivan Jyoti Satapathy (Captain) - +918260548799 <br> 
+                Anant Nag (Vice Captain) - +917735111244 
+            </p>
+        </div>
+    </div>
 </body>
-</html>
+</html> 
+{% comment %} <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+</form> {% endcomment %}

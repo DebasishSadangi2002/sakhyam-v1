@@ -1,5 +1,5 @@
 {% load static %}
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
     <title>Admin Dashboard</title>
@@ -34,7 +34,8 @@
             <li>No approved users without password set.</li>
         {% endfor %}
     </ul>
-    <button onclick="window.location.href='{% url 'accounts:logout' %}'">Logout</button>
+    <button onclick="window.location.href='{% url 'accounts:logout' %}'">Logout</button> 
+    <button onclick="window.location.href='{% url 'events:event_create' %}'">Add Event</button> 
     {% comment %} <h2>Gallery Operations</h2>
     <ul>
         <li><a href="{% url 'accounts:gallery_home' %}">View Gallery</a></li>
@@ -50,6 +51,65 @@
             <li>No categories available.</li>
         {% endfor %}
     </ul> {% endcomment %}
+    <h2>Member Requests</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Photo</th>
+        <th>Bio</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <ul>
+        {% for member in members %}
+        <li>
+            <img src="{{ member.photo.url }}" alt="{{ member.name }}">
+            <h2>{{ member.name }}</h2>
+            <p>Email: {{ member.email }}</p>
+            <p>Phone: {{ member.phone }}</p>
+            <p>Bio: {{ member.bio }}</p>
+            
+            <a href="{% url 'member:approve_member' member.id %}">Approve</a>
+            <a href="{% url 'member:delete_member' member.id %}">Delete</a>
+            
+        </li>
+        {% endfor %}
+    </ul>
+    </tbody>
+  </table>
+  <h2>Members</h2>
+  <ul>
+    {% for member in approved_members  %}
+    <li>
+        <img src="{{ member.photo.url }}" alt="{{ member.name }}">
+        <h2>{{ member.name }}</h2>
+        <p>Email: {{ member.email }}</p>
+        <p>Phone: {{ member.phone }}</p>
+        <p>Bio: {{ member.bio }}</p>
+        
+        <a href="{% url 'member:assign_role' member.id %}">Role</a>
+        <a href="{% url 'member:delete_member' member.id %}">Delete</a>
+    </li>
+    {% endfor %}
+    {% for member in roles  %}
+    <li>
+        <img src="{{ member.photo.url }}" alt="{{ member.name }}">
+        <h2>{{ member.member }}</h2>
+        <p>Role: {{ member.role }}</p>
+        {% comment %} <p>Phone: {{ member.phone }}</p>
+        <p>Bio: {{ member.bio }}</p>
+         {% endcomment %}
+        {% comment %} <a href="{% url 'member:assign_role' member.id %}">Role</a>
+        <a href="{% url 'member:delete_member' member.id %}">Delete</a> {% endcomment %}
+    </li>
+    {% endfor %}
+</ul>
+</ul>
 
 </body>
 </html>

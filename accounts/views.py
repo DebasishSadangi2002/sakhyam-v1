@@ -10,6 +10,8 @@ from django.utils.encoding import force_bytes, force_str
 from django.contrib.auth.tokens import default_token_generator
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.sites.shortcuts import get_current_site
+
+from Member.models import Member, MemberRole
 from .models import CustomUser
 from .forms import CustomUserCreationForm
 
@@ -71,6 +73,10 @@ def dashboard(request):
     if request.user.is_staff:
         pending_users = CustomUser.objects.filter(is_approved=False)
         approved_users = CustomUser.objects.filter(is_approved=True)
+        members = Member.objects.filter(is_approved=False)
+        approved_members = Member.objects.all()
+        roles = MemberRole.objects.all()
+        
         
         approved_users_with_password = [user for user in approved_users if user.has_usable_password()]
         approved_users_without_password = [user for user in approved_users if not user.has_usable_password()]
@@ -79,6 +85,9 @@ def dashboard(request):
             'pending_users': pending_users,
             'approved_users_with_password': approved_users_with_password,
             'approved_users_without_password': approved_users_without_password,
+            'members':members,
+            'approved_members':approved_members,
+            'roles':roles,
         })
     else:
         return redirect('home')
@@ -146,3 +155,6 @@ def set_initial_password(request, uidb64, token):
         return render(request, 'set_password.html', {'form': form})
     else:
         return render(request, 'password_reset_invalid.html')
+
+
+
