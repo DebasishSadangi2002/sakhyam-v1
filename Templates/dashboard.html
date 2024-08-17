@@ -8,7 +8,7 @@
 <body>
     <h1>Admin Dashboard</h1>
 
-    <h2>Pending Users</h2>
+    <!-- <h2>Pending Users</h2>
     <ul>
         {% for user in pending_users %}
             <li>{{ user.email }} - <a href="{% url 'accounts:approve_user' user.id %}">Approve</a> | <a href="{% url 'accounts:disapprove_user' user.id %}">Disapprove</a></li>
@@ -33,7 +33,7 @@
         {% empty %}
             <li>No approved users without password set.</li>
         {% endfor %}
-    </ul>
+    </ul> -->
     <button onclick="window.location.href='{% url 'accounts:logout' %}'">Logout</button> 
     <button onclick="window.location.href='{% url 'events:event_create' %}'">Add Event</button> 
     {% comment %} <h2>Gallery Operations</h2>

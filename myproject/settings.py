@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-f)!0$^2)7t*x)c5%d2%n+s9zpojagxfcx@$%%*kx&^j4!0dxf%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse('postgresql://postgres:oWFEUIUDUcSuHxLPzzTkEujbZrncomdI@viaduct.proxy.rlwy.net:23231/railway')
+    'default': dj_database_url.parse('postgresql://postgres:wLRKItZFAJcbsLFcNatuaMtkwhLOvaRC@junction.proxy.rlwy.net:53809/railway')
 }
 
 
