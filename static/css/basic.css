@@ -133,7 +133,7 @@ footer {
 }
 
 .radiant-background {
-    background: url('../image/Gradient.jpg') no-repeat center center/cover;
+    background: url('https://github.com/SakhyamGcek/Photos/blob/main/Gradient.jpg?raw=true') no-repeat center center/cover;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     color: black;
