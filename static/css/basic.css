@@ -163,6 +163,9 @@ footer {
     line-height: 1.6em;
     text-align: justify;
 }
+.text_center{
+    text-align: center;
+}
 
 .custom-font3 {
     font-family: "Josefin Sans", sans-serif;
