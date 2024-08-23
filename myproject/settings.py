@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['sakhyam-v1-production.up.railway.app','localhost']
 
-
 # Application definition
 
 INSTALLED_APPS = [
