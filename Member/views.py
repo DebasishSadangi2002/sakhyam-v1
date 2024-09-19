@@ -14,7 +14,7 @@ def member_create(request):
         form = MemberForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return render(request, 'thankyou.html')
     else:
         form = MemberForm()
     return render(request, 'member_form.html', {'form': form})
