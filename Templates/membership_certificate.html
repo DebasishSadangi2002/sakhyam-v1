@@ -1,116 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style type='text/css'>
-        body, html {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            color: black;
-            display: table;
-            font-family: Georgia, serif;
-            font-size: 24px;
-            text-align: center;
-            width: 100%;
-            height: 100vh;
-            background-color: #f3f3f3;
-        }
-        .container {
-            border: 20px solid tan;
-            width: 750px;
-            height: 563px;
-            display: table-cell;
-            vertical-align: middle;
-            background-color: white;
-            margin: auto;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        .logo {
-            color: tan;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        .marquee {
-            color: tan;
-            font-size: 48px;
-            margin: 20px;
-        }
-        .assignment {
-            margin: 20px;
-        }
-        .person {
-            border-bottom: 2px solid black;
-            font-size: 32px;
-            font-style: italic;
-            margin: 20px auto;
-            width: 400px;
-        }
-        .reason {
-            margin: 20px;
-        }
-        .signatories {
-            margin: 40px 0 20px 0;
-            display: flex;
-            justify-content: space-around;
-        }
-        .signatory {
-            text-align: center;
-            font-size: 18px;
-        }
-        @media (min-width: 600px) {
-            .logo {
-                font-size: 28px;
-            }
-            .marquee {
-                font-size: 48px;
-            }
-            .assignment, .reason {
-                font-size: 24px;
-            }
-            .person {
-                font-size: 32px;
-            }
-            .signatory {
-                font-size: 18px;
-            }
-        }
-    </style>
+    <title>Certificate of Membership</title>
 </head>
-<body>
-    <div class="container">
-        <div class="logo">
+<body style="margin: 0; padding: 0; color: #333; font-family: Georgia, serif; font-size: 24px; text-align: center; width: 100%; height: 100vh; background-color: #f5f5f5; display: table;">
+
+    <div style="border: 20px solid #d1b47a; width: 750px; height: 563px; display: table-cell; vertical-align: middle; background-color: #ffffff; margin: auto; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">
+        
+        <div style="color: #160d06; font-size: 38px; margin-bottom: 20px;">
             Government College of Engineering Kalahandi
         </div>
 
-        <div class="marquee">
+        <div style="color: #6d4c41; font-size: 48px; margin: 20px;">
             Certificate of Membership
         </div>
 
-        <div class="assignment">
+        <div style="color: #2d13d3; margin: 20px;">
             This certificate is presented to
         </div>
 
-        <div class="person">
+        <div style="font-size: 32px; font-style: italic; margin: 20px auto; width: 400px; color: #e1141b;">
             {{ member.name }} of {{ member.year }} year {{ member.branch }}
         </div>
 
-        <div class="reason">
+        <div style="color: #333; margin: 20px;">
             For joining the Sakhyam Club
         </div>
 
-        <div class="signatories">
-            <div class="signatory">
-                __________________________<br>
-                Ananta Nag<br>
-                Vice Captain, Sakhyam Club
-            </div>
-            <div class="signatory">
-                __________________________<br>
-                JivanJyoti Satapathy<br>
-                Captain, Sakhyam Club
-            </div>
+        <div style="margin: 40px 0 20px 0; display: flex; justify-content: space-around;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="text-align: center; font-size: 28px; padding: 10px; color: #6d4c41;">
+                        <div>
+                            <br>
+                            Ananta Nag<br>
+                            Vice Captain, Sakhyam Club
+                        </div>
+                    </td>
+                    <td style="text-align: center; font-size: 28px; padding: 10px; color: #6d4c41;">
+                        <div>
+                            <br>
+                            JivanJyoti Satapathy<br>
+                            Captain, Sakhyam Club
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
+        
     </div>
+
 </body>
 </html>

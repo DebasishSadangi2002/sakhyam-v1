@@ -76,6 +76,7 @@ def generate_pdf(template_src, context_dict):
         return result.getvalue()
     return None
 
+
 def assign_role(request, member_id):
     member = get_object_or_404(Member, id=member_id)
 
