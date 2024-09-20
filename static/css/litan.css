@@ -61,3 +61,24 @@ h4,p{
     font-size: 12px;
     margin: 7px;
 }
+
+.faculty img{
+    height: 25rem;
+    width: 25rem;
+    margin-left: -15rem;
+}
+
+.set{
+    margin-left: -15rem;
+    margin-right: 12rem;
+}
+/* 
+@media screen and (max-width:400px){
+    .faculty img{
+        margin-left:0rem;
+    }
+    .set{
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+} */
